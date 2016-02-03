@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DnD 4E Character Maker</title>
+	<script type = "text/javascript" src = "jquery-1.12.0.min.js"></script>
+	<style>
+		#Stats{
+			width:100%;
+			font-weight:bold;
+			text-align:center;
+		}
+		.half{
+			text-align:center;
+			width:50%;
+			height:100px;
+		}
+		.reveal{
+			width:100%
+		}
+	</style>
+</head>
+<body>
+<form id = "charsheet">
+	Character Name:<input type="text" name = "name" value = "John Doe"></input>
+	Level:<input type="text" name = "level" value = "1"></input>
+	Age:<input type="text" name="age" value = "25"></input>
+
+Race:
+<select name = "race">
+	 <option value = "Elf">Elf</option>
+	 <option value = "Dragonborn">Dragonborn</option>
+	 <option value = "Dwarf">Dwarf</option>
+	 <option value = "Eladrin">Eladrin</option>
+	 <option value = "Half-Elf">Half-Elf</option>
+	 <option value = "Halfling">Halfling</option>
+	 <option value = "Human">Human</option>
+	 <option value = "Tiefling">Tiefling</option>
+</select>
+
+Class:
+<select name = "class">
+	 <option value = "Cleric">Cleric</option>
+	 <option value = "Fighter">Fighter</option>
+	 <option value = "Paladin">Paladin</option>
+	 <option value = "Ranger">Ranger</option>
+	 <option value = "Rogue">Rogue</option>
+	 <option value = "Warlock">Warlock</option>
+	 <option value = "Warlord">Warlord</option>
+	 <option value = "Wizard">Wizard</option>
+</select>
+<input type = "button" value = "Submit" id = "sub">
+</form>
+
+<table class = "reveal">
+<tr><td class = "Stats" colspan = "2"></td></tr>
+<tr>
+<td id = "Race" class = "half"></td>
+<td id = "Class" class = "half"></td>
+</tr>
+</table>
+
+</body>
+<script>
+	$("#sub").click(function(){
+		var x = $("#charsheet").serializeArray();
+		var name = x[0].value;
+		var level = x[1].value;
+		var age = x[2].value;
+		var race = x[3].value;
+		var classes = x[4].value;
+		jQuery.each(x, function(index, value){
+			console.log(index + ":" + value.name + ":" + value.value);
+		});
+		$(".Stats").text("Stats");
+		$(".Stats").load('statsheet.html');
+		$("#Race").text(race);
+		$("#Class").text(classes);
+		$(".reveal").css({
+			'border-style':'ridge',
+			'text-align':'center',
+		});
+		$(".half").css({
+			'text-align':'center top',
+			'width':'50%'
+		});
+	});
+</script>
+</html>
