@@ -92,9 +92,11 @@ Class:
 		});
 		var statarray = ["str","con","dex","int","wis","cha"]
 		
+		console.log(race)
+		console.log("human"==race)
 		for(var i = 0; i <statarray.length; i ++){
 			if( race == "human"){
-				$("#"+statarray[i]+"-add").html("<input type = 'radio' name = 'human' value = '"+statarray[i]+"'></input>")
+				$("#"+statarray[i]+"-add").append("<input type = 'radio' name = 'human' value = '"+statarray[i]+"'></input>")
 			}
 		}
 	});
