@@ -78,7 +78,6 @@ Class:
 		jQuery.each(x, function(index, value){
 			console.log(index + ":" + value.name + ":" + value.value);
 		});
-		$(".Stats").text("Stats");
 		$(".Stats").load('statsheet.html');
 		$("#Race").text(race);
 		$("#Class").text(classes);
@@ -93,10 +92,10 @@ Class:
 		var statarray = ["str","con","dex","int","wis","cha"]
 		
 		console.log(race)
-		console.log("human"==race)
 		for(var i = 0; i <statarray.length; i ++){
 			if( race == "Human"){
-				$("#"+statarray[i]+"-add").append("<input type = 'radio' name = 'human' value = '"+statarray[i]+"'></input>");
+				console.log("#"+statarray[i]+"-add");
+				$("#"+statarray[i]+"-add").append("HIII");
 				console.log("appended "+statarray[i]);
 			}
 		}
