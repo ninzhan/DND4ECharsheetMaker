@@ -92,13 +92,14 @@ Class:
 		var statarray = ["str","con","dex","int","wis","cha"]
 		
 		console.log(race)
-		for(var i = 0; i <statarray.length; i ++){
+		jQuery.each(statarray, function(i, val){
 			if( race == "Human"){
-				console.log("#"+statarray[i]+"-add");
-				$("#"+statarray[i]+"-add").append("HIII");
-				console.log("appended "+statarray[i]);
+				console.log("#"+val+"-add");
+				$("#"+val+"-add").append("HIII");
+				console.log(("#"+val+"-add").text());
+				console.log("appended "+val);
 			}
-		}
+		});
 	});
 </script>
 </html>
