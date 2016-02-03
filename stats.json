@@ -1,0 +1,75 @@
+{
+  "Dragonborn": {
+	"stats":{
+		"str": 2,
+		"con": 0,
+		"dex": 0,
+		"int": 0,
+		"wis": 0,
+		"cha": 2
+	}
+  },
+  "Dwarf": {
+	"stats":{
+		"str": 0,
+		"con": 2,
+		"dex": 0,
+		"int": 0,
+		"wis": 2,
+		"cha": 0
+	}
+  },
+  "Eladrin": {
+	"stats":{
+		"str": 0,
+		"con": 0,
+		"dex": 2,
+		"int": 2,
+		"wis": 0,
+		"cha": 0
+	}
+  },
+  "Elf": {
+	"stats":{
+		"str": 0,
+		"con": 0,
+		"dex": 2,
+		"int": 0,
+		"wis": 2,
+		"cha": 0
+	}
+  },
+  "Half-elf": {
+	"stats":{
+		"str": 0,
+		"con": 2,
+		"dex": 0,
+		"int": 0,
+		"wis": 0,
+		"cha": 2
+	}
+  },
+  "Halfling": {
+	"stats":{
+		"str": 0,
+		"con": 0,
+		"dex": 2,
+		"int": 0,
+		"wis": 0,
+		"cha": 2
+	}
+  },
+  "Tiefling": {
+	"stats":{
+		"str": 0,
+		"con": 0,
+		"dex": 0,
+		"int": 2,
+		"wis": 0,
+		"cha": 2
+	}
+  },
+  "Human": {
+	"stats":"special"
+  }
+}

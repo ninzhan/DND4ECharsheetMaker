@@ -28,10 +28,10 @@
 
 Race:
 <select name = "race">
-	 <option value = "Elf">Elf</option>
 	 <option value = "Dragonborn">Dragonborn</option>
 	 <option value = "Dwarf">Dwarf</option>
 	 <option value = "Eladrin">Eladrin</option>
+	 <option value = "Elf">Elf</option>
 	 <option value = "Half-Elf">Half-Elf</option>
 	 <option value = "Halfling">Halfling</option>
 	 <option value = "Human">Human</option>
@@ -49,13 +49,13 @@ Class:
 	 <option value = "Warlord">Warlord</option>
 	 <option value = "Wizard">Wizard</option>
 </select>
-<input type = "button" value = "Submit" id = "sub">
 <select name = "generation">
 	<option value = "standard">Standard (3d6-arranged)</option>
 	<option value = "static">Static (3d6-ordered)</option>
 	<option value = "pointbuy">PointBuy (Base 8, 25 points)</option>
 	<option value = "array">Array (16-14-13-12-11-10)</option>
 </select>
+<input type = "button" value = "Submit" id = "sub">
 </form>
 
 <table class = "reveal">
@@ -90,6 +90,13 @@ Class:
 			'text-align':'center top',
 			'width':'50%'
 		});
+		var statarray = ["str","con","dex","int","wis","cha"]
+		
+		for(int i = 0; i <statarray.length; i ++{
+			if( race == "human"){
+				$("#"+statarray[i]+"-add").html("<input type = 'radio' name = 'human' value = '"+statarray[i]+"'></input>")
+			}
+		}
 	});
 </script>
 </html>
