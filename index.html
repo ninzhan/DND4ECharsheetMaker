@@ -96,7 +96,7 @@ Class:
 			if( race == "Human"){
 				console.log("#"+val+"-add");
 				$("#"+val+"-add").append("HIII");
-				console.log($("#"+val+"-add").text());
+				$("<input/">, {type:"radio", name : "human", id : val+"-cho"}).appendTo("#"+val+"add");
 				console.log("appended "+val);
 			}
 			console.log($("#str-add").text());
