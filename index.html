@@ -108,6 +108,13 @@ Class:
 			console.log($("#str-add").text());
 		});
 		console.log($("#str-add").text());
+			$("<input/>", 
+				{
+				"type" : "radio", 
+				"name" : "human", 
+				"id" : val+"-cho"
+				}
+				).appendTo("#"+val+"add");
 	});
 	console.log($("#str-add").text());
 </script>
