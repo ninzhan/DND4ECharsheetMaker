@@ -1,0 +1,72 @@
+html{
+    font-family: "Courier New", sans-serif;
+}
+h1{
+    text-align: center;
+    font-family: Courier, sans-serif;
+}
+.nav {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, white, #88aa88, #66aa66, #88aa88, white);
+    text-align: center;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a, .dropbtn {
+    padding: 10px;
+    display: inline-block;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+li a:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+li.dropdown{
+    display: inline-block;
+}
+li.dropdown a{
+    border-radius: 2px 2px 0 0;
+}
+
+.dropdown-content{
+    display: none;
+    position:absolute;
+    background-color: #447744;
+    border-radius: 0 0 2px 2px;
+
+}
+.dropdown-content a{
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover{
+    background-color: #000000;
+    color:white;
+
+}
+.dropdown-content a:hover .dropdown{
+    background-color: #666666;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+body{
+    width: 75%;
+    margin: auto;
+}
+#contact{
+    text-align: center;
+}

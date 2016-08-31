@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta property="og:type" content="product" />
-<meta property="og:title" content="Testing" />
-<meta property="og:site_name" content="Ninzhans" />
-<meta property="og:price:amount" content="98.00" />
-<meta property="og:price:currency" content="USD" />
-<meta property="og:availability" content="instock" />
+
+	<link rel="stylesheet" type = "text/css" href="main.css">
 <meta charset="ISO-8859-1">
 <title>DnD 4E Character Maker</title>
 	<script type = "text/javascript" src = "jquery-1.12.0.min.js"></script>
@@ -27,6 +23,32 @@
 	</style>
 </head>
 <body>
+<h1> DND 4E Character Sheet maker</h1>
+<ul class = "nav">
+	<li><a href = "http://ninzhan.github.io/project1/">Home</a></li>
+
+	<li class = "dropdown" id = "project">
+		<a class = dropbtn>Projects</a>
+		<div class="dropdown-content" id = "projects">
+			<a href = "http://ninzhan.github.io/DND4ECharsheetMaker/">DND Charsheet</a>
+		</div>
+	</li>
+
+	<li class = "dropdown" id = "blog">
+		<a class="dropbtn">Blogs</a>
+		<div class = "dropdown-content" id = "blogs">
+			<a href = "https://firelordgaming.blogspot.com">Gaming</a>
+			<a href = "https://firelorddesigns.blogspot.com">Design</a>
+			<a href = "https://agentredacted.blogspot.com">[REDACTED]</a>
+		</div>
+	</li>
+
+	<li><a href = "http://ninzhan.github.io/project1/contact.html">Contact</a></li>
+	<li><a>Mythos</a></li>
+</ul>
+
+<br>
+
 <form id = "charsheet">
 	Character Name:<input type="text" name = "name" value = "John Doe"></input>
 	Level:<input type="text" name = "level" value = "1"></input>
