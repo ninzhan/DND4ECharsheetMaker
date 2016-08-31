@@ -23,7 +23,7 @@
 	</style>
 </head>
 <body>
-<h1> DND 4E Character Sheet maker</h1>
+<h1> DND 4E Character Sheet Maker</h1>
 <ul class = "nav">
 	<li><a href = "http://ninzhan.github.io/project1/">Home</a></li>
 
@@ -80,47 +80,32 @@ Class:
 <select name = "generation">
 	<option value = "standard">Standard (3d6-arranged)</option>
 	<option value = "static">Static (3d6-ordered)</option>
-	<option value = "pointbuy">PointBuy (Base 8, 25 points)</option>
 	<option value = "array">Array (16-14-13-12-11-10)</option>
 </select>
 <input type = "button" value = "Submit" id = "sub">
 </form>
 
-<table class = "reveal">
-<tr><td id = "Stats" colspan = "2"></td></tr>
-<tr>
-<td id = "Race" class = "half"></td>
-<td id = "Class" class = "half"></td>
-</tr>
-</table>
+<br>
 
-</body>
-<script>
-	$("#sub").click(function(){
-		var x = $("#charsheet").serializeArray();
-		var name = x[0].value;
-		var level = x[1].value;
-		var age = x[2].value;
-		var race = x[3].value;
-		var classes = x[4].value;
-		jQuery.each(x, function(index, value){
-			console.log(index + ":" + value.name + ":" + value.value);
-		});
-		$("#Stats").load("statsheet-"+race.toLowerCase()+".html");
-		$("#Race").text(race);
-		$("#Class").text(classes);
-		$(".reveal").css({
-			'border-style':'ridge',
-			'text-align':'center',
-		});
-		$(".half").css({
-			'text-align':'center top',
-			'width':'50%'
-		});
-		var statarray = ["str","con","dex","int","wis","cha"]
-		
-		console.log(race)
-		console.log($("#str-add").text());
-	});
-</script>
+<ul>
+	<ul class = "stat">
+		<li class = "stat-title">Strength</li>
+	</ul>
+	<ul class = "stat">
+		<li class = "stat-title">Constitution</li>
+	</ul>
+	<ul class = "stat">
+		<li class = "stat-title">Dexterity</li>
+	</ul>
+	<ul class = "stat">
+		<li class = "stat-title">Intelligence</li>
+	</ul>
+	<ul class = "stat">
+		<li class = "stat-title">Wisdom</li>
+	</ul>
+	<ul class = "stat">
+		<li class = "stat-title">Charisma</li>
+	</ul>
+</ul>
+
 </html>
